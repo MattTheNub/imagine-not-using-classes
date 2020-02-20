@@ -4,12 +4,24 @@ let player;
 let controller;
 let loop;
 let boxReady = false;
+let floorReady = false;
+const floorImage = new Image();
+let wallReady = false;
+const wallImage = new Image();
 const boxImage = new Image();
+ctx.imageSmoothingEnabled = false;
 boxImage.onload = function() {
   boxReady = true;
 };
 boxImage.src = 'box.png';
-
+floorImage.onload = function() {
+  floorReady = true;
+};
+floorImage.src = 'flooooR.png';
+wallImage.onload = function() {
+  wallReady = true;
+};
+wallImage.src = 'WALL.png';
 /* prettier disable */
 const gameMap = [
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -57,19 +69,19 @@ Map = {
 };
 
 function drawGame() {
-  color: 'green'; // i do not understand what your goal is here
   for (let j = 0; j < Map.mH; ++j) {
     for (let i = 0; i < Map.mW; ++i) {
       switch (gameMap[j * Map.mW + i]) {
         case 0:
-          ctx.fillStyle = '#000000';
-          color = 'black';
+          if (floorReady) {
+            ctx.drawImage(floorImage, i * Map.tW, j * Map.tW, 50, 50);
+          }
           break;
         default:
-          ctx.fillStyle = '#13FF00';
-          color = 'green';
+          if (wallReady) {
+            ctx.drawImage(wallImage, i * Map.tW, j * Map.tW, 50, 50);
+          }
       }
-      ctx.fillRect(i * Map.tW, j * Map.tH, Map.tW, Map.tH);
     }
   }
 };
