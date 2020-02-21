@@ -21,7 +21,7 @@ floorImage.src = 'flooooR.png';
 wallImage.onload = function() {
   wallReady = true;
 };
-wallImage.src = 'WALL.png';
+wallImage.src = 'WALLLL.png';
 /* prettier disable */
 const gameMap = [
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
