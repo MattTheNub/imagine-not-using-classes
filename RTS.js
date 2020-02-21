@@ -17,7 +17,7 @@ boxImage.src = 'box.png';
 floorImage.onload = function() {
   floorReady = true;
 };
-floorImage.src = 'flooooR.png';
+floorImage.src = 'floooooR.png';
 wallImage.onload = function() {
   wallReady = true;
 };
