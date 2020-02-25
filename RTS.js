@@ -23,7 +23,7 @@ floorImage.src = 'floooooR.png';
 wallImage.onload = function() {
   wallReady = true;
 };
-wallImage.src = 'WaLLL.png';
+wallImage.src = 'WALLL.png';
 walImage.onload = function() {
   walReady = true;
 };
