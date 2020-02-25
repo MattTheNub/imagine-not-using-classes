@@ -138,7 +138,7 @@ controller = {
 loop = function() {
   if (controller.right) {
     if (player.xv < 7) {
-      player.xv += 0.5;
+      player.xv += 0.4;
     } else {
       player.xv = 6;
     }
@@ -146,7 +146,7 @@ loop = function() {
 
   if (controller.left) {
     if (player.xv > -7) {
-      player.xv -= 0.5;
+      player.xv -= 0.4;
     } else {
       player.xv = -6;
     }
@@ -154,7 +154,7 @@ loop = function() {
 
   if (controller.up) {
     if (player.yv > -7) {
-      player.yv -= 0.5;
+      player.yv -= 0.4;
     } else {
       player.yv = -7;
     }
@@ -162,7 +162,7 @@ loop = function() {
 
   if (controller.down) {
     if (player.yv < 7) {
-      player.yv += 0.5;
+      player.yv += 0.4;
     } else {
       player.yv = 7;
     }
